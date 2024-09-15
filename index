@@ -20,8 +20,8 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Arroz e Flores</h1>
-            <p>Antologia de literatura rebelde em tradução</p>
+            <h1>Bem-vindo à Biblioteca Digital</h1>
+            <p>Explore nossos textos e traduções de livre acesso.</p>
         </section>
         <section class="featured">
             <h2>Destaques</h2>
@@ -38,7 +38,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Arroz e flores. </p>
+        <p>&copy; 2024 Biblioteca Digital. Todos os direitos reservados.</p>
     </footer>
     <script src="js/scripts.js"></script>
 </body>
