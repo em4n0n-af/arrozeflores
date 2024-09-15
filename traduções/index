@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="Marxists Internet Archive">
+<meta name="classification" content="política, história, economia, educação, marxismo, socialismo, revolução, comunismo">
+<meta name="description" content="A mais completa biblioteca do Marxismo com conteúdos em mais de 80 línguas e textos de mais de 450 autores facilmente acessíveis por arquivo, tema ou história.">
+<title>Arquivo Marxista na Internet</title>
+<link rel="stylesheet" href="css/fontes/jost.css" type="text/css">
+<link rel="stylesheet" href="css/frente.css" type="text/css">
+<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+<style>footer div.foto a {color: white;}</style>
+</head>
+
+<body>
+<header>
+<div class="logo">Arquivo <br><b>Marxista</b> <br>na Internet</div>
+
+<div class="lista">
+<ul>
+<li><a href="biblioteca.htm">Biblioteca</a></li>
+<li><a href="dicionario/index.htm">Dicionário</a></li>
+<li><a href="admin/novidades.htm">Novidades</a></li>
+<li><a href="tematica/index.htm">Temática</a></li>
+</ul>
+</div>
+
+<div class="menu">
+<a href="#rodape" >
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</a>
+</div>
+</header>
+
+<main>
+<div class="conteiner">
+<script src="css/menu.js"></script>
+</div>
+</main>
+
+<footer>
+<nav class="lista">
+<ul>
+<li><a href="biblioteca.htm">Biblioteca</a></li>
+<li><a href="dicionario/index.htm">Dicionário</a></li>
+<li><a href="admin/novidades.htm">Novidades</a></li>
+<li><a href="tematica/index.htm">Temática</a></li>
+</ul>
+</nav>
+
+<div class="lista">
+<ul>
+<li><a href="admin/correio.htm">Fale conosco</a></li>
+<li><a href="../admin/volunteers/steering.htm">Quem somos</a></li>
+<li><a href="admin/voluntariado.htm">Voluntariado</a></li>
+</ul>
+</div>
+ 
+<div class="foto">Siga o Arquivo no <a href="https://www.instagram.com/arquivomarxista">Instagram</a> e no <a href="https://www.twitter.com/arquivomarxista">Twitter</a></div>
+<a id="rodape"></a>
+</footer>
+</body>
+</html>
