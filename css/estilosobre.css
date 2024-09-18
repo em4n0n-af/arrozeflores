@@ -1,0 +1,149 @@
+/* Estrutura básica */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  background-color: #ffffff; /* Fundo branco */
+}
+
+/* Cabeçalho */
+header {
+  background-color: #000000; /* Removida transparência */
+  color: #ffffff;
+  top: 0;
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bolder;
+  font-size: xx-large;
+  text-transform: lowercase;
+  line-height: 0.9;
+  text-align: left;
+}
+
+.logo a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.lista {
+  margin-top: 20px;
+}
+
+.lista ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: larger;
+  text-align: left;
+}
+
+.lista li {
+  margin-bottom: 15px;
+}
+
+.lista a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lista a:hover {
+  color: #990000;
+  text-decoration: underline;
+}
+
+/* Rodapé incorporado no cabeçalho */
+footer {
+  color: white;
+  padding: 10px 0;
+  font-size: small;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Conteúdo principal */
+main {
+  margin-left: 220px; /* Para deixar espaço ao cabeçalho à esquerda */
+  padding: 40px;
+  background-color: #ffffff; /* Fundo branco para o corpo principal */
+  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Título principal */
+h1 {
+  color: #333;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: left
+}
+
+/* Divisões alfabéticas */
+.alfabetica h2 {
+  font-size: 1.8rem;
+  color: #990000;
+  margin-top: 20px;
+  border-bottom: 2px solid #990000;
+}
+
+/* Estilo para a seção de autores */
+.autores, .alfabetica {
+  display: flex;
+  flex-direction: column;
+ 
+}
+div {
+  margin: 0;
+}
+.autor {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.autor img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover scale-down;
+  border-radius: 30%;
+}
+
+.autor p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.autor a {
+  color: #333;
+  text-decoration: none;
+}
+
+.autor a:hover {
+  color: #990000;
+  text-decoration: underline;
+}

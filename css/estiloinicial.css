@@ -1,0 +1,124 @@
+/* Tela sempre cheia */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fundo com imagem */
+body {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: #333;
+   background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f8/Three_children_drawing%2C_%28on_panels%29%2C_Japan%2C_1909_LCCN2001705661.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100%;
+   overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(199, 142, 20, 0); /* Fundo translúcido */
+    color: #ffffff;
+    top: 0;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza horizontalmente */
+    position: absolute;
+}
+
+/* Logo */
+.logo {
+    margin: 0;
+    padding: 25px;
+    line-height: 1;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-transform: lowercase;
+    user-select: none;
+    text-align: left;
+}
+
+/* Lista de navegação */
+.lista {
+    margin: 10px 0; /* Espaço acima e abaixo da lista */
+    padding: 0;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.lista ul {
+    margin: 0 25px 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 50px; /* Espaçamento entre itens do menu */
+}
+
+.lista a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lista a:hover {
+    color: #990000;
+    text-decoration: underline;
+}
+
+/* Corpo principal */
+main {
+    width: 80%; /* Mais largura para o conteúdo */
+    margin: 0 auto;
+    padding: 100px 30px 30px 30px;
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo translúcido no corpo */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra no título */
+    text-align: left; /* Alinhamento à esquerda */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+    text-align: justify; /* Justificado para um layout mais clássico */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Rodapé */
+footer {
+    background-color: rgba(51, 51, 51, 0.208); /* Fundo translúcido no rodapé */
+    color: white;
+    padding: 10px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: small;
+    font-weight: 500;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
