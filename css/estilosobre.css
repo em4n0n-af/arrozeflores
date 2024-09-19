@@ -83,22 +83,40 @@ footer ul {
 
 /* Conteúdo principal */
 main {
-  margin-left: 220px; /* Para deixar espaço ao cabeçalho à esquerda */
+  margin-left: 220px; /* Espaço para o cabeçalho à esquerda */
   padding: 40px;
   background-color: #ffffff; /* Fundo branco para o corpo principal */
-  line-height: 1.6;
-  font-size: 1.2rem;
-  margin-top: 20px;
+  line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+  font-size: 1.15rem; /* Leve aumento na fonte para melhorar a leitura */
+  margin-top: 10px;
   border-radius: 10px;
+  max-width: 1200px; /* Limita a largura para melhorar a legibilidade */
+  margin-right: auto; /* Centraliza o conteúdo principal */
 }
 
-/* Título principal */
-h1 {
-  color: #333;
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  text-align: left
+/* Estilo para seções */
+section {
+  padding-top: 1px
+  margin-bottom: 40px; /* Espaço entre seções para uma leitura mais fluida */
+}
+
+/* Títulos de seções */
+h2 {
+  font-size: 1.8rem;
+  color: #990000;
+  margin-top: 20px;
+  margin-bottom: 10px; /* Espaço abaixo do título */
+  border-bottom: 2px solid #990000;
+  padding-bottom: 5px;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 1px; /* Espaço entre parágrafos */
+  padding: 0;
+  margin: 0;
+  text-align: justify; /* Justifica o texto para uma aparência mais limpa */
+  text-indent: 1em; /* Indenta o primeiro parágrafo de cada seção */
 }
 
 /* Divisões alfabéticas */
@@ -113,11 +131,10 @@ h1 {
 .autores, .alfabetica {
   display: flex;
   flex-direction: column;
- 
+  margin: 10px;
+  padding-top: 1px;
 }
-div {
-  margin: 0;
-}
+
 .autor {
   display: flex;
   align-items: center;

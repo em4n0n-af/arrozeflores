@@ -12,7 +12,7 @@ html, body {
 
 /* Cabeçalho */
 header {
-    background-color: #000000; /* Removida transparência */
+    background-color: #000000; /* Fundo sólido */
     color: #ffffff;
     top: 0;
     padding: 20px;
@@ -83,66 +83,73 @@ footer ul {
 
 /* Conteúdo principal */
 main {
-    margin-left: 220px; /* Para deixar espaço ao cabeçalho à esquerda */
+    margin-left: 220px; /* Espaço para o cabeçalho à esquerda */
     padding: 40px;
     background-color: #ffffff; /* Fundo branco para o corpo principal */
-    line-height: 1.6;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 1.15rem;
+    margin-top: 10px;
     border-radius: 10px;
+    max-width: 1200px; /* Limita a largura para melhorar a legibilidade */
+    margin-right: auto;
 }
 
 /* Título principal */
 h1 {
-    color: #333;
+    color: #990000;
     font-weight: bold;
     font-size: 2.5rem;
     margin-bottom: 30px;
-    text-align: left
+    text-align: left;
 }
 
-/* Divisões alfabéticas */
-.alfabetica h2 {
+/* Estilo para a biografia */
+.biografia {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.foto-autor {
+    width: 300px;
+    height: 400px;
+    object-fit: cover contain;
+    border-radius: 10%;
+}
+
+.texto-biografia {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Estilo para a lista de obras */
+.obras ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.obras h2 {
+    align-items: center;
+    text-align: center;
     font-size: 1.8rem;
     color: #990000;
     margin-top: 20px;
     border-bottom: 2px solid #990000;
-    padding-bottom: 5px;
+    padding-bottom: 5px;;
+}
+.obras li {
+    margin-bottom: 10px;
 }
 
-/* Estilo para a seção de autores */
-.autores, .alfabetica {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.autor {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
-}
-
-.autor img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover scale-down;
-    border-radius: 10%;
-}
-
-.autor p {
-    margin: 0;
-    font-size: 1.2rem;
+.obras a {
+    color: #333;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.autor a {
-    color: #333;
-    text-decoration: none;
-}
-
-.autor a:hover {
+.obras a:hover {
     color: #990000;
     text-decoration: underline;
 }
