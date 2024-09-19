@@ -49,7 +49,7 @@ header {
 
 /* Lista de navegação */
 .lista {
-    margin: 10px 0; /* Espaço acima e abaixo da lista */
+    margin: 10px 0;
     padding: 0;
     font-weight: bold;
     font-size: x-large;
@@ -60,7 +60,7 @@ header {
     padding: 0;
     list-style-type: none;
     display: flex;
-    gap: 50px; /* Espaçamento entre itens do menu */
+    gap: 50px;
 }
 
 .lista a {
@@ -76,10 +76,10 @@ header {
 
 /* Corpo principal */
 main {
-    width: 80%; /* Mais largura para o conteúdo */
+    width: 80%;
     margin: 0 auto;
     padding: 100px 30px 30px 30px;
-    background-color: rgba(255, 255, 255, 0.85); /* Fundo translúcido no corpo */
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -88,22 +88,22 @@ h1 {
     color: #333;
     font-weight: bolder;
     font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra no título */
-    text-align: left; /* Alinhamento à esquerda */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: left;
     margin-bottom: 20px;
 }
 
 p {
     font-size: 1.2rem;
     color: #333;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra no texto */
-    text-align: justify; /* Justificado para um layout mais clássico */
-    line-height: 1.6; /* Espaçamento entre linhas */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-align: justify;
+    line-height: 1.6;
 }
 
 /* Rodapé */
 footer {
-    background-color: rgba(51, 51, 51, 0.208); /* Fundo translúcido no rodapé */
+    background-color: rgba(51, 51, 51, 0.208);
     color: white;
     padding: 10px 50px;
     width: 100%;
@@ -123,52 +123,58 @@ footer ul {
     list-style-type: none;
 }
 
+/* Media Queries para tablets e dispositivos móveis */
 @media (max-width: 768px) {
-    main {
-        max-width: 100%;
-        padding: 10px;
-    }
-    
-    .titulo {
-        font-size: 2rem;
-    }
-
-    .subtitulo {
-        font-size: 1.5rem;
-    }
-
-    .autor {
-        font-size: 1rem;
-    }
-
-    .capitulo {
+    /* Ajuste o logo e o menu de navegação */
+    .logo {
         font-size: 1.8rem;
+        padding: 15px;
     }
 
-    .subcapitulo {
-        font-size: 1.3rem;
+    .lista ul {
+        flex-direction: column; /* Coloca o menu de navegação em uma coluna */
+        gap: 20px;
     }
 
-    .texto {
-        font-size: 1rem;
-        line-height: 1.5;
+    .lista {
+        font-size: large; /* Reduz o tamanho da fonte do menu */
+    }
+
+    /* Ajuste o corpo principal */
+    main {
+        width: 90%; /* Aumenta a largura para preencher mais a tela */
+        padding: 50px 20px 20px 20px; /* Reduz o padding */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduz o tamanho da fonte para caber melhor na tela */
+    }
+
+    p {
+        font-size: 1rem; /* Ajuste para melhor leitura em telas menores */
     }
 }
 
 @media (max-width: 480px) {
-    .titulo {
-        font-size: 1.8rem;
-    }
-
-    .subtitulo {
-        font-size: 1.2rem;
-    }
-
-    .capitulo {
+    /* Para telas menores (celulares) */
+    .logo {
         font-size: 1.5rem;
     }
 
-    .texto {
+    .lista ul {
+        gap: 10px; /* Reduz o espaçamento entre os itens do menu */
+    }
+
+    main {
+        padding: 30px 15px 15px 15px; /* Mais compactado para telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
         font-size: 0.9rem;
+        line-height: 1.5;
     }
 }
