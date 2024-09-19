@@ -72,7 +72,7 @@ main {
     margin-bottom: 3px;
 }
 .creditos a {
-    color: rgb(10, 10, 10);
+    color: rgb(126, 114, 114);
     text-decoration: none;  
 }
 
@@ -116,6 +116,7 @@ main {
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
+    text-indent: 1.27cm;
 }
 
 /* Capítulos e Subcapítulos */
@@ -134,6 +135,7 @@ main {
     margin-bottom: 10px;
     color: #666; /* Subcapítulo em cinza intermediário */
 }
+
 
 /* Responsividade */
 @media (max-width: 1024px) {

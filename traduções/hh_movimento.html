@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimento literário e movimento dos trabalhadores - Hirabayashi Hatsunosuke</title>
+    <style>
+        sup {
+            font-size: 0.8rem;
+            vertical-align: super;
+        }
+
+        a {
+            color: #900;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .notas p {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/texto.css">
+</head>
+
+<body>
+    <main>
+        <!-- Destaque para o autor e título -->
+        <section class="destaque">
+            <h1 class="titulo">Movimento literário e movimento dos trabalhadores</h1>
+            <p class="autor"><strong><a href="../autores/arashima_takeo.html" target="_blank">Hirabayashi
+                        Hatsunosuke</a></strong></p>
+        </section>
+
+        <!-- Créditos pela tradução e fonte -->
+        <section class="creditos">
+            <p><strong>Tradução</strong>: Fabio Pomponio Saldanha, Felipe Chaves Gonçalves Pinto, Gustavo Perez Katague
+            </p>
+            <p><strong>HTML</strong>: Felipe Chaves Gonçalves Pinto</p>
+            <p><strong>Revisão</strong>: João Marcelo Amaral Reimão Monzani </p>
+            <p><strong>Primeira publicação da tradução</strong>: <em>Revista Magma</em>, vol. 28, no. 18, p. 223-226,
+                2023. Disponível em: <a href="https://www.revistas.usp.br/magma/article/view/210623"><em>Revista
+                        Magma</em></a>.
+                Acesso em: 19/09/2024</p>
+            <p><strong>Texto original</strong>: "Bungei undô to rôdô undô". In: <em>Nihon gendai bungaku zenshû</em>, no. 69: puroretaria bungakushô, Tóquio: Kôdansha, 1969 (1922).
+                Disponível em: <a href="https://www.aozora.gr.jp/cards/000221/files/1860.html"><em>Aozorabunko</em></a>.
+                Acesso em: 19/09/2024.</p>
+            <p><strong>Este texto está licenciado por</strong>:
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                    Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+            </p>
+        </section>
+
+        <!-- Sumário ou índice -->
+        <section class="indice">
+            <h3>Sumário</h3>
+            <ul>
+                <li><a href="#capitulo1">Capítulo 1: Título do Capítulo</a></li>
+                <li><a href="#capitulo2">Capítulo 2: Título do Capítulo</a></li>
+                <li><a href="#capitulo3">Capítulo 3: Título do Capítulo</a></li>
+                <!-- Adicione mais capítulos conforme necessário -->
+            </ul>
+        </section>
+
+        <!-- Texto traduzido -->
+        <section class="texto">
+            <h3 id="capitulo1" class="capitulo">Capítulo 1: Título do Capítulo</h3>
+            <p>Este é o início do capítulo 1. O texto está formatado de maneira agradável, com espaçamento adequado e
+                fácil leitura.</p>
+            <h4 class="subcapitulo">Subcapítulo 1.1: Título do Subcapítulo</h4>
+            <p>Texto do subcapítulo 1.1 aqui.</p>
+            <h3 id="capitulo2" class="capitulo">Capítulo 2: Título do Capítulo</h3>
+            <p>Texto do segundo capítulo começa aqui.</p>
+            <!-- Adicione mais conteúdo conforme necessário -->
+        </section>
+
+        <!-- Seção das notas -->
+        <div class="notas" id="notas">
+            <h3>Notas</h3>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const notasDiv = document.getElementById('notas');
+                const notas = document.querySelectorAll('.nota');
+
+                notas.forEach((nota, index) => {
+                    // Cria a numeração automática
+                    const notaNumber = index + 1;
+                    const notaId = `nota${notaNumber}`;
+                    const linkId = `link${notaNumber}`;
+                    const notaText = nota.getAttribute('data-nota');
+
+                    // Adiciona um link para a nota de rodapé com numeração automática
+                    nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
+
+                    // Cria o conteúdo da nota de rodapé
+                    const notaPara = document.createElement('p');
+                    notaPara.id = notaId;
+                    notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
+
+                    // Adiciona a nota de rodapé ao final
+                    notasDiv.appendChild(notaPara);
+                });
+            });
+        </script>
+    </main>
+</body>
+
+</html>
