@@ -187,6 +187,7 @@ p {
       height: auto; /* Remove a altura fixa */
       flex-direction: row; /* Alinha itens horizontalmente */
       justify-content: stretch; /* Espaça logo e menu */
+      position: relative;
   }
 
   .logo {
