@@ -267,11 +267,6 @@ p {
 
 
 @media (max-width: 480px) {
-    header {
-        padding: 5px;
-        font-size: small;
-    }
-
     .logo {
         font-size: medium;
     }
