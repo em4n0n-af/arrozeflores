@@ -58,7 +58,7 @@ header {
 @media (max-width: 768px) {
     /* Esconde o menu principal inicialmente */
     .lista ul {
-        display: none; /* O menu está escondido por padrão em dispositivos móveis */
+        display: none !important; /* O menu está escondido por padrão em dispositivos móveis */
         flex-direction: column;
         position: absolute;
         top: 70px;
