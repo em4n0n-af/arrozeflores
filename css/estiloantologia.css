@@ -80,6 +80,15 @@ footer ul {
     padding: 0;
     list-style-type: none;
 }
+.telapequena {
+    display: none;
+    position: fixed; /* Mantém a posição absoluta no fundo da tela */
+        bottom: 0; /* Alinha ao fundo */
+        width: 100%; /* Largura total */
+        padding: 0; /* Ajusta o padding */
+        background-color: #000000; /* Fundo escuro para destaque */
+        font-size: small; /* Ajusta o tamanho da fonte */
+}
 
 /* Conteúdo principal */
 main {
@@ -145,4 +154,155 @@ h1 {
 .autor a:hover {
     color: #990000;
     text-decoration: underline;
+}
+
+/* Botão hamburger (aparece apenas em dispositivos móveis) */
+.menu-btn {
+    display: none; /* Escondido por padrão (desktop) */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: right;
+    align-self: auto;
+    ;
+    
+}
+
+/* Estilos para tablets e dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        width: 100%; /* Cabeçalho ocupa a largura total da tela */
+        height: auto; /* Remove a altura fixa */
+        flex-direction: row; /* Alinha itens horizontalmente */
+        justify-content: stretch; /* Espaça logo e menu */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    }
+    .lista {
+        margin-top: 0; /* Remove a margem superior */
+    }
+
+
+        /* Esconde o menu principal inicialmente */
+        .lista ul {
+            display: none !important; /* O menu está escondido por padrão em dispositivos móveis */
+            flex-direction: column;
+            position: absolute;
+            top: 90px;
+            right: 0;
+            background-color: #000000b5;
+            width: 100%;
+            height: auto;
+            text-align: right;
+            padding: 10px;
+            font-size: x-large;
+            font-weight: bold;
+        }
+    
+        /* Exibe o botão hamburger */
+        .menu-btn {
+            display: block;
+            padding: 0 20px;
+            z-index: 1000; /* Garante que o botão fique sobre o conteúdo */
+        }
+    
+        /* Quando o menu estiver aberto */
+        .menu-aberto ul {
+            display: flex !important; /* Garante que o menu apareça ao clicar */
+        }
+
+
+    .lista li {
+        margin-bottom: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    footer {
+        bottom: 0;
+        width: 100%;
+        background-color: #000000;
+        font-size: small; /* Ajusta o tamanho da fonte */
+        padding: 5px 0; /* Reduz o padding */
+        display: none;
+    }
+    .telapequena {
+        display: block;
+        bottom: 0;
+        width: 100%;
+        background-color: #00000063;
+        font-size: x-small; /* Ajusta o tamanho da fonte */
+        padding: auto; /* Reduz o padding */
+        margin: auto;
+        position: fixed;
+        text-align: center;
+    }
+    main {
+        margin-left: 0; /* Remove a margem esquerda para o cabeçalho fixo */
+        padding: 20px; /* Reduz o padding */
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte do título */
+        margin-bottom: 20px; /* Reduz a margem inferior */
+    }
+
+    .alfabetica h2 {
+        font-size: 1.4rem; /* Reduz o tamanho da fonte dos subtítulos */
+    }
+
+    .autor {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: flex-start; /* Alinha itens à esquerda */
+    }
+
+    .autor img {
+        width: 50px; /* Reduz o tamanho da imagem do autor */
+        height: 50px; /* Reduz o tamanho da imagem do autor */
+    }
+
+    .autor p {
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+}
+
+/* Estilos para dispositivos móveis menores */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .lista ul {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do menu */
+    }
+
+    .lista li {
+        margin-bottom: 5px; /* Reduz ainda mais o espaço entre itens */
+    }
+
+    main {
+        padding: 10px; /* Reduz o padding */
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    .alfabetica h2 {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte dos subtítulos */
+    }
+
+    .autor img {
+        width: 40px; /* Reduz ainda mais o tamanho da imagem do autor */
+        height: 40px; /* Reduz ainda mais o tamanho da imagem do autor */
+    }
+
+    .autor p {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    }
 }

@@ -6,7 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    background-color:  #ffffff; /* Cor de fundo suave */
+    background-color: #ffffff; /* Cor de fundo suave */
     color: #000000; /* Texto em cinza escuro */
     line-height: 1.8;
 }
@@ -44,31 +44,38 @@ main {
     font-style: italic;
     color: #666;
 }
-.autor a{
+
+.autor a {
     color: rgb(10, 10, 10);
     text-decoration: none;
 }
+
 .autor a:hover {
     color: #900;
     text-decoration: underline;
 }
+
 /* Créditos */
 .creditos {
     font-size: 1rem;
-    margin-bottom: 0%;
-    padding: 0;
+    margin-bottom: 0;
+    padding: 10px;
     margin: 0;
     color: #000000;
     font-style: normal;
-    border-bottom: 1px solid #510101;
+        border-bottom: 1px solid #510101;
     border-top: 1px solid #510101;
-    margin-bottom: 0;
-    line-height: 0%;
+    line-height: 1;
 }
-.creditos a{
+.creditos p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.creditos a {
     color: rgb(10, 10, 10);
     text-decoration: none;  
 }
+
 .creditos a:hover {
     color: #900;
     text-decoration: underline;
@@ -126,4 +133,87 @@ main {
     margin-top: 20px;
     margin-bottom: 10px;
     color: #666; /* Subcapítulo em cinza intermediário */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .autor {
+        font-size: 1.5rem;
+    }
+
+    .texto {
+        font-size: 1.1rem;
+    }
+
+    .capitulo {
+        font-size: 1.8rem;
+    }
+
+    .subcapitulo {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo {
+        font-size: 1.4rem;
+    }
+
+    .autor {
+        font-size: 1.4rem;
+    }
+
+    .texto {
+        font-size: 1rem;
+    }
+
+    .capitulo {
+        font-size: 1.6rem;
+    }
+
+    .subcapitulo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.6rem;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .autor {
+        font-size: 1.2rem;
+    }
+
+    .texto {
+        font-size: 0.9rem;
+    }
+
+    .capitulo {
+        font-size: 1.4rem;
+    }
+
+    .subcapitulo {
+        font-size: 1rem;
+    }
 }

@@ -109,7 +109,15 @@ h1 {
     gap: 20px;
     margin-bottom: 40px;
 }
-
+/* Parágrafos */
+p {
+    margin-bottom: 1px; /* Espaço entre parágrafos */
+    padding: 0;
+    margin: 0;
+    text-align: justify; /* Justifica o texto para uma aparência mais limpa */
+    text-indent: 1em; /* Indenta o primeiro parágrafo de cada seção */
+  }
+  
 .foto-autor {
     width: 300px;
     height: 400px;
@@ -152,4 +160,135 @@ h1 {
 .obras a:hover {
     color: #990000;
     text-decoration: underline;
+}
+/* Botão hamburger (aparece apenas em dispositivos móveis) */
+.menu-btn {
+    display: none; /* Escondido por padrão (desktop) */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: right;
+    align-self: auto;
+  }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: stretch;
+        padding: 10px;
+    }
+    footer {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        
+    }
+    .lista {
+        margin-top: 0;
+    }
+    .lista li {
+        margin-bottom: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    /* Esconde o menu principal inicialmente */
+    .lista ul {
+        display: none !important; /* O menu está escondido por padrão em dispositivos móveis */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #000000b5;
+        width: 100%;
+        height: auto;
+        text-align: right;
+        padding: 10px;
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    /* Exibe o botão hamburger */
+    .menu-btn {
+        display: block;
+        padding: 0 20px;
+        z-index: 1000; /* Garante que o botão fique sobre o conteúdo */
+    }
+
+    /* Quando o menu estiver aberto */
+    .menu-aberto ul {
+        display: flex !important; /* Garante que o menu apareça ao clicar */
+    }
+
+  main {
+      margin-left: 0; /* Remove a margem esquerda para o cabeçalho fixo */
+      padding: 20px; /* Reduz o padding */
+      font-size: 1rem; /* Ajusta o tamanho da fonte */
+  }
+
+  h1 {
+      font-size: 1.8rem; /* Reduz o tamanho da fonte do título */
+      margin-bottom: 20px; /* Reduz a margem inferior */
+  }
+
+  .alfabetica h2 {
+      font-size: 1.4rem; /* Reduz o tamanho da fonte dos subtítulos */
+  }
+
+
+    .biografia {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto-autor {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+    .telapequena {
+        display: block;
+        bottom: 0;
+        width: 100%;
+        background-color: #00000063;
+        font-size: x-small; /* Ajusta o tamanho da fonte */
+        padding: auto; /* Reduz o padding */
+        margin: auto;
+        position: fixed;
+        text-align: center;}
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+        font-size: small;
+    }
+
+    .logo {
+        font-size: medium;
+    }
+
+    .lista ul {
+        font-size: small;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .biografia {
+        gap: 10px;
+    }
+
+    .foto-autor {
+        max-width: 300px;
+    }
 }
