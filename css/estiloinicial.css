@@ -127,7 +127,7 @@ footer ul {
 @media (max-width: 768px) {
     /* Ajuste o logo e o menu de navegação */
     .logo {
-        font-size: 1.8rem;
+        font-size: 2rem;
         padding: 15px;
     }
 
@@ -158,7 +158,7 @@ footer ul {
 @media (max-width: 480px) {
     /* Para telas menores (celulares) */
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .lista ul {
