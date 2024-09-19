@@ -15,7 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #000;
+    background-color: #00000000;
     color: #fff;
 }
 
@@ -51,6 +51,7 @@ header {
     border: none;
     color: #fff;
     font-size: 2rem;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -61,21 +62,25 @@ header {
         display: none !important; /* O menu está escondido por padrão em dispositivos móveis */
         flex-direction: column;
         position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: #000;
+        top: 110px;
+        right: 25px;
+        background-color: #00000000;
         width: 100%;
-        text-align: left;
+        height: auto;
+        text-align: right;
         padding: 10px;
+        font-size: x-large;
+        font-weight: bold;
     }
 
     /* Exibe o botão hamburger */
     .menu-btn {
         display: block;
+        z-index: 1000; /* Garante que o botão fique sobre o conteúdo */
     }
 
     /* Quando o menu estiver aberto */
-    .menu-aberto .lista ul {
-        display: flex;
+    .menu-aberto ul {
+        display: flex !important; /* Garante que o menu apareça ao clicar */
     }
 }
