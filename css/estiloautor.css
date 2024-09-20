@@ -1,18 +1,18 @@
 /* Estrutura básica */
 * {
     box-sizing: border-box;
-}
-html, body {
+  }
+  html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    background-color: #ffffff; /* Fundo branco */
-}
-
-/* Cabeçalho */
-header {
-    background-color: #000000; /* Fundo sólido */
+    background-color: #ffffff;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #000000;
     color: #ffffff;
     top: 0;
     padding: 20px;
@@ -23,147 +23,150 @@ header {
     height: 100%;
     width: 200px;
     justify-content: space-between;
-}
-
-.logo {
+  }
+  
+  .logo {
     font-weight: bolder;
     font-size: xx-large;
     text-transform: lowercase;
     line-height: 0.9;
     text-align: left;
-}
-
-.logo a {
+  }
+  
+  .logo a {
     color: #ffffff;
     text-decoration: none;
-}
-
-.lista {
+  }
+  
+  .lista {
     margin-top: 20px;
-}
-
-.lista ul {
+  }
+  
+  .lista ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     font-size: larger;
     text-align: left;
-}
-
-.lista li {
+  }
+  
+  .lista li {
     margin-bottom: 15px;
-}
-
-.lista a {
+  }
+  
+  .lista a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-}
-
-.lista a:hover {
+  }
+  
+  .lista a:hover {
     color: #990000;
     text-decoration: underline;
-}
-
-/* Rodapé incorporado no cabeçalho */
-footer {
+  }
+  
+  /* Rodapé incorporado no cabeçalho */
+  footer {
     color: white;
     padding: 10px 0;
     font-size: small;
     text-align: left;
     display: flex;
     justify-content: flex-start;
-}
-
-footer ul {
+  }
+  
+  footer ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
-
-/* Conteúdo principal */
-main {
-    margin-left: 220px; /* Espaço para o cabeçalho à esquerda */
+  }
+  
+  /* Conteúdo principal */
+  main {
+    margin-left: 220px;
     padding: 40px;
-    background-color: #ffffff; /* Fundo branco para o corpo principal */
+    background-color: #ffffff;
     line-height: 1.8;
     font-size: 1.15rem;
     margin-top: 10px;
     border-radius: 10px;
-    max-width: 1200px; /* Limita a largura para melhorar a legibilidade */
+    max-width: 1200px;
     margin-right: auto;
-}
-
-/* Título principal */
-h1 {
+  }
+  
+  /* Título principal */
+  h1 {
     color: #990000;
     font-weight: bold;
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: left;
-}
-
-/* Estilo para a biografia */
-.biografia {
+  }
+  
+  /* Estilo para a biografia */
+  .biografia {
     display: flex;
     gap: 20px;
     margin-bottom: 40px;
-}
-/* Parágrafos */
-p {
-    margin-bottom: 1px; /* Espaço entre parágrafos */
-    padding: 0;
-    margin: 0;
-    text-align: justify; /* Justifica o texto para uma aparência mais limpa */
-    text-indent: 1em; /* Indenta o primeiro parágrafo de cada seção */
   }
   
-.foto-autor {
+  /* Parágrafos */
+  p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1px;
+    text-align: justify;
+    text-indent: 1em;
+  }
+  
+  /* Foto do autor */
+  .foto-autor {
     width: 300px;
     height: 400px;
     object-fit: cover contain;
     border-radius: 10%;
-}
-
-.texto-biografia {
+  }
+  
+  .texto-biografia {
     flex: 1;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
-}
-
-/* Estilo para a lista de obras */
-.obras ul {
+  }
+  
+  /* Estilo para a lista de obras */
+  .obras ul {
     list-style-type: none;
     padding: 0;
-}
-
-.obras h2 {
-    align-items: center;
+  }
+  
+  .obras h2 {
     text-align: center;
     font-size: 1.8rem;
     color: #990000;
     margin-top: 20px;
     border-bottom: 2px solid #990000;
-    padding-bottom: 5px;;
-}
-.obras li {
+    padding-bottom: 5px;
+  }
+  
+  .obras li {
     margin-bottom: 10px;
-}
-
-.obras a {
+  }
+  
+  .obras a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
-}
-
-.obras a:hover {
+  }
+  
+  .obras a:hover {
     color: #990000;
     text-decoration: underline;
-}
-/* Botão hamburger (aparece apenas em dispositivos móveis) */
-.menu-btn {
-    display: none; /* Escondido por padrão (desktop) */
+  }
+  
+  /* Botão hamburger (aparece apenas em dispositivos móveis) */
+  .menu-btn {
+    display: none;
     background: none;
     border: none;
     color: #fff;
@@ -171,119 +174,117 @@ p {
     font-weight: bold;
     cursor: pointer;
     text-align: right;
-    align-self: auto;
   }
-
-/* Responsividade */
-@media (max-width: 768px) {
+  
+  /* Responsividade para tablets */
+  @media (max-width: 768px) {
     header {
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: row;
-        justify-content: stretch;
-        padding: 10px;
+      width: 100%;
+      height: auto;
+      position: relative;
+      flex-direction: row;
+      justify-content: stretch;
     }
+  
     footer {
-        display: none;
+      display: none;
     }
-
+  
     .logo {
-        font-size: 1.5rem;
-        
+      font-size: 1.5rem;
     }
+  
     .lista {
-        margin-top: 0;
+      margin-top: 0;
     }
+  
     .lista li {
-        margin-bottom: 10px; /* Reduz o espaço entre os itens */
+      margin-bottom: 10px;
     }
-
-    /* Esconde o menu principal inicialmente */
+  
     .lista ul {
-        display: none !important; /* O menu está escondido por padrão em dispositivos móveis */
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        background-color: #000000b5;
-        width: 100%;
-        height: auto;
-        text-align: right;
-        padding: 10px;
-        font-size: x-large;
-        font-weight: bold;
+      display: none !important;
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      right: 0;
+      background-color: #000000b5;
+      width: 100%;
+      height: auto;
+      text-align: right;
+      padding: 10px;
+      font-size: x-large;
+      font-weight: bold;
     }
-
-    /* Exibe o botão hamburger */
+  
     .menu-btn {
-        display: block;
-        padding: 0 20px;
-        z-index: 1000; /* Garante que o botão fique sobre o conteúdo */
+      display: block;
+      padding: 0 20px;
+      z-index: 1000;
     }
-
-    /* Quando o menu estiver aberto */
+  
     .menu-aberto ul {
-        display: flex !important; /* Garante que o menu apareça ao clicar */
+      display: flex !important;
     }
-
-  main {
-      margin-left: 0; /* Remove a margem esquerda para o cabeçalho fixo */
-      padding: 20px; /* Reduz o padding */
-      font-size: 1rem; /* Ajusta o tamanho da fonte */
-  }
-
-  h1 {
-      font-size: 1.8rem; /* Reduz o tamanho da fonte do título */
-      margin-bottom: 20px; /* Reduz a margem inferior */
-  }
-
-  .alfabetica h2 {
-      font-size: 1.4rem; /* Reduz o tamanho da fonte dos subtítulos */
-  }
-
-
-    .biografia {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .foto-autor {
-        width: 100%;
-        height: auto;
-        max-width: 400px;
-    }
-    .telapequena {
-        display: block;
-        bottom: 0;
-        width: 100%;
-        background-color: #00000063;
-        font-size: x-small; /* Ajusta o tamanho da fonte */
-        padding: auto; /* Reduz o padding */
-        margin: auto;
-        position: fixed;
-        text-align: center;}
-}
-
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: medium;
-    }
-
-    .lista ul {
-        font-size: small;
-    }
-
+  
     main {
-        padding: 10px;
+      margin-left: 0;
+      padding: 20px;
+      font-size: 1rem;
     }
-
+  
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  
     .biografia {
-        gap: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .foto-autor {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+    }
+  
+    .telapequena {
+      display: block;
+      bottom: 0;
+      width: 100%;
+      background-color: #00000063;
+      font-size: x-small;
+      position: fixed;
+      text-align: center;
+    }
+  }
+  
+  /* Responsividade para dispositivos móveis menores */
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.2rem;
+    }
+  
+    .lista ul {
+      font-size: 0.9rem;
+      top: 90px;
     }
 
-    .foto-autor {
-        max-width: 300px;
+    .lista li {
+        margin-bottom: 5px;
     }
-}
+  
+    main {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    .biografia {
+      gap: 10px;
+    }
+  
+    .foto-autor {
+      max-width: 300px;
+    }
+  }

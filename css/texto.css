@@ -2,21 +2,22 @@
 * {
     box-sizing: border-box;
 }
+
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    background-color: #ffffff; /* Cor de fundo suave */
-    color: #000000; /* Texto em cinza escuro */
+    background-color: #ffffff;
+    color: #000000;
     line-height: 1.8;
 }
 
 /* Corpo principal */
 main {
-    max-width: 1200px; /* Limita a largura para facilitar a leitura */
-    margin: 40px auto; /* Centraliza o conteúdo na página */
-    padding: 0 20px; /* Remove a borda externa e limita o padding */
-    background-color: #ffffff; /* Mesma cor do fundo */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #ffffff;
 }
 
 /* Destaque para autor, título e subtítulo */
@@ -29,13 +30,13 @@ main {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #000000; /* Título em cinza escuro */
+    color: #000000;
 }
 
 .subtitulo {
     font-size: 2rem;
     font-weight: 400;
-    color: #666; /* Subtítulo em cinza intermediário */
+    color: #666;
     margin-bottom: 15px;
 }
 
@@ -58,22 +59,22 @@ main {
 /* Créditos */
 .creditos {
     font-size: 1rem;
-    margin-bottom: 0;
     padding: 10px;
     margin: 0;
     color: #000000;
     font-style: normal;
-        border-bottom: 1px solid #510101;
     border-top: 1px solid #510101;
+    border-bottom: 1px solid #510101;
     line-height: 1;
 }
+
 .creditos p {
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin: 3px 0;
 }
+
 .creditos a {
     color: rgb(126, 114, 114);
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 .creditos a:hover {
@@ -123,19 +124,16 @@ main {
 .capitulo {
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #333; /* Capítulo em cinza escuro */
+    margin: 40px 0 20px;
+    color: #333;
 }
 
 .subcapitulo {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #666; /* Subcapítulo em cinza intermediário */
+    margin: 20px 0 10px;
+    color: #666;
 }
-
 
 /* Responsividade */
 @media (max-width: 1024px) {

@@ -1,72 +1,67 @@
-/* Tela sempre cheia */
+/* Estilos globais */
 * {
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
 }
 
 /* Fundo com imagem */
 body {
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   color: #333;
    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f8/Three_children_drawing%2C_%28on_panels%29%2C_Japan%2C_1909_LCCN2001705661.jpg');
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-   height: 100%;
    overflow-x: hidden;
 }
 
 /* Cabeçalho */
 header {
-    background-color: rgba(199, 142, 20, 0); /* Fundo translúcido */
-    color: #ffffff;
-    top: 0;
-    padding: 20px;
-    left: 0;
-    right: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centraliza horizontalmente */
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(199, 142, 20, 0);
+    color: #fff;
     position: absolute;
+    top: 0;
 }
 
 /* Logo */
 .logo {
     margin: 0;
     padding: 25px;
-    line-height: 1;
     font-weight: bolder;
     font-size: xx-large;
     text-transform: lowercase;
     user-select: none;
-    text-align: left;
+    color: #fff;
 }
 
 /* Lista de navegação */
 .lista {
     margin: 10px 0;
-    padding: 0;
     font-weight: bold;
     font-size: x-large;
 }
 
 .lista ul {
-    margin: 0 25px 0 0;
-    padding: 0;
-    list-style-type: none;
     display: flex;
     gap: 50px;
+    list-style: none;
+    margin-right: 25px;
+    padding: 0;
 }
 
 .lista a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .lista a:hover {
@@ -74,14 +69,25 @@ header {
     text-decoration: underline;
 }
 
+/* Botão hamburger (para dispositivos móveis) */
+.menu-btn {
+    display: none; /* Escondido por padrão (desktop) */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Corpo principal */
 main {
     width: 80%;
     margin: 0 auto;
-    padding: 100px 30px 30px 30px;
+    padding: 100px 30px 30px;
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -89,7 +95,6 @@ h1 {
     font-weight: bolder;
     font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -111,8 +116,6 @@ footer {
     justify-content: left;
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
     font-size: small;
     font-weight: 500;
 }
@@ -120,53 +123,68 @@ footer {
 footer ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
-/* Media Queries para tablets e dispositivos móveis */
+/* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
-    /* Ajuste o logo e o menu de navegação */
+    /* Ajuste da logo */
     .logo {
         font-size: 2rem;
         padding: 15px;
     }
 
+    /* Ajuste da lista de navegação */
     .lista ul {
-        flex-direction: column; /* Coloca o menu de navegação em uma coluna */
-        gap: 20px;
+        display: none; /* Escondido por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 110px;
+        right: 25px;
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+        text-align: right;
+        padding: 10px;
+        font-size: x-large;
     }
 
-    .lista {
-        font-size: large; /* Reduz o tamanho da fonte do menu */
+    /* Exibe o botão hamburger */
+    .menu-btn {
+        display: block;
+        z-index: 1000;
     }
 
-    /* Ajuste o corpo principal */
+    /* Quando o menu estiver aberto */
+    .menu-aberto ul {
+        display: flex !important; /* Exibe o menu ao clicar */
+    }
+
+    /* Ajuste do corpo principal */
     main {
-        width: 90%; /* Aumenta a largura para preencher mais a tela */
-        padding: 50px 20px 20px 20px; /* Reduz o padding */
+        width: 90%;
+        padding: 50px 20px 20px;
     }
 
     h1 {
-        font-size: 2rem; /* Reduz o tamanho da fonte para caber melhor na tela */
+        font-size: 2rem;
     }
 
     p {
-        font-size: 1rem; /* Ajuste para melhor leitura em telas menores */
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    /* Para telas menores (celulares) */
     .logo {
         font-size: 1.8rem;
     }
 
     .lista ul {
-        gap: 10px; /* Reduz o espaçamento entre os itens do menu */
+        gap: 10px;
     }
 
     main {
-        padding: 30px 15px 15px 15px; /* Mais compactado para telas pequenas */
+        padding: 30px 15px 15px;
     }
 
     h1 {
