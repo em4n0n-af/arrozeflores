@@ -135,6 +135,13 @@ main {
     color: #666;
 }
 
+.rodape {
+    text-align: right; /* Alinha o texto à direita */
+    font-size: 0.5rem; /* Tamanho da fonte menor */
+    color: #666; /* Cor do texto */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
     .titulo {
@@ -159,6 +166,10 @@ main {
 
     .subcapitulo {
         font-size: 1.4rem;
+    }
+
+    .rodape {
+        font-size: 0.4rem
     }
 }
 
@@ -190,6 +201,9 @@ main {
     .subcapitulo {
         font-size: 1.2rem;
     }
+    .rodape {
+        font-size: 0.3rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -215,5 +229,9 @@ main {
 
     .subcapitulo {
         font-size: 1rem;
+    }
+
+    .rodape {
+        font-size: 0.2rem;
     }
 }

@@ -344,6 +344,19 @@
                 });
             });
         </script>
+        
+        <footer class="rodape">
+            <span>Adicionado em: <strong id="data-adicao"></strong></span> | 
+            <span>Atualizado em: <strong id="data_atualizacao"></strong></span>
+        </footer>
+
+        <script>
+            const dataAdicao = new Date('2024-09-19'); // Coloque aqui a data de adição
+            const dataAtualizacao = new Date(); // Data atual para atualização
+        
+            document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
+            document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
+        </script>
 </body>
 
 </html>
