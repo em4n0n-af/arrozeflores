@@ -105,9 +105,9 @@
   
   /* Estilo para a biografia */
   .biografia {
-    display: flex;
     gap: 20px;
     margin-bottom: 40px;
+    overflow: hidden;
   }
   
   /* Parágrafos */
@@ -125,10 +125,12 @@
     height: 400px;
     object-fit: cover contain;
     border-radius: 10%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
   }
   
   .texto-biografia {
-    flex: 1;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: justify;
