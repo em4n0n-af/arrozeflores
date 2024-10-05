@@ -25,4 +25,4 @@ sitemap:
   path: /sitemap.xml
 
 exclude:
-  - *.html
+  - "*.html"  # Use aspas ao redor da extensão
