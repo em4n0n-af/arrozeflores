@@ -17,7 +17,6 @@ kramdown:
 
 # Plugins
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
 
 sitemap:
