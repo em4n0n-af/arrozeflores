@@ -14,11 +14,12 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-# Plugins (opcional, depende do que você quer adicionar)
+# Plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  sitemap:
+
+sitemap:
   exclude:
     - /404.html
   path: /sitemap.xml
