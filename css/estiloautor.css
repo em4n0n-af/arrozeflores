@@ -177,6 +177,15 @@
     cursor: pointer;
     text-align: right;
   }
+  .telapequena {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #000000;
+    font-size: small;
+}
   
   /* Responsividade para tablets */
   @media (max-width: 768px) {
