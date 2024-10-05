@@ -23,3 +23,6 @@ sitemap:
   exclude:
     - /404.html
   path: /sitemap.xml
+
+exclude:
+  - *.html
