@@ -24,5 +24,3 @@ sitemap:
     - /404.html
   path: /sitemap.xml
 
-exclude:
-  - "*.html"  # Use aspas ao redor da extensão
