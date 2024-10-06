@@ -135,6 +135,15 @@
     line-height: 1.6;
     text-align: justify;
   }
+
+  .texto-biografia a {
+    color: brown;
+    text-decoration: none;
+  }
+  .texto-biografia a:hover {
+    color: #990000;
+    text-decoration: underline;
+  }
   
   /* Estilo para a lista de obras */
   .obras ul {
