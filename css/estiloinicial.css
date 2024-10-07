@@ -43,6 +43,14 @@ header {
     user-select: none;
     color: #fff;
 }
+.logo h1 {
+    margin: 0;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-transform: lowercase;
+    user-select: none;
+    color: #fff;
+}
 
 /* Lista de navegação */
 .lista {
@@ -90,22 +98,6 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    color: #333;
-    font-weight: bolder;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2rem;
-    color: #333;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    text-align: justify;
-    line-height: 1.6;
-}
-
 /* Rodapé */
 footer {
     background-color: rgba(51, 51, 51, 0.208);
@@ -120,10 +112,12 @@ footer {
     font-weight: 500;
 }
 
-footer ul {
+footer h2 {
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: small;
+    font-weight: 500;
 }
 
 /* Media Queries para dispositivos móveis */
@@ -172,6 +166,10 @@ footer ul {
     p {
         font-size: 1rem;
     }
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -195,4 +193,7 @@ footer ul {
         font-size: 0.9rem;
         line-height: 1.5;
     }
+    footer {
+        justify-content: center;
+        text-align: center;
 }
