@@ -3,17 +3,7 @@ title: "Arroz e Flores"
 description: "Antologia de literatura rebelde japonesa em tradução para o português"
 url: "https://arrozeflores.art.br"
 permalink: /:slug/
-baseurl: ""
 author: "Arroz e Flores"
-
-# GitHub Pages settings
-github: 
-  is_project_page: false # Mude para true se for uma página de projeto, não um site principal
-
-# Configurações de markdown
-markdown: kramdown
-kramdown:
-  input: GFM
 
 # Plugins
 plugins:
