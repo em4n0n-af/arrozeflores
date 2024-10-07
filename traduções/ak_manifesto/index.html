@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../images/icone.svg" type="image/svg+xml">
+    <title>Manifesto - Vermelho e preto</title>
+    <style>
+        sup {
+            font-size: 0.8rem;
+            vertical-align: super;
+        }
+
+        a {
+            color: #900;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .notas p {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/texto.css">
+</head>
+
+<body>
+    <main>
+        <!-- Destaque para o autor e título -->
+        <section class="destaque">
+            <h1 class="titulo">Manifesto</h1>
+            <p class="autor"><strong><a href="../../antologia/vermelho_e_preto" target="_blank">Vermelho e
+                        preto</a></strong></p>
+        </section>
+
+        <!-- Créditos pela tradução e fonte -->
+        <section class="creditos">
+            <p><strong>Tradução</strong>: Felipe Chaves Gonçalves Pinto</p>
+            <p><strong>HTML</strong>: Felipe Chaves Gonçalves Pinto</p>
+            <p><strong>Primeira publicação da tradução</strong>: <em>Revista Magma</em>, vol. 28, no. 18, p. 217-222,
+                2023. Disponível em: <a href="https://www.revistas.usp.br/magma/article/view/210622"
+                    target="_blank"><em>Revista
+                        Magma</em></a>.
+                Acesso em: 19/09/2024</p>
+            <p><strong>Texto original</strong>: "Sengen hitotsu". In: <em>Kaizô</em>, Tóquio, 1922.
+                Disponível em: <a href="https://www.aozora.gr.jp/cards/000025/files/217_20459"
+                    target="_blank"><em>Aozorabunko</em></a>.
+                Acesso em: 19/09/2024.</p>
+            <p><strong>Este texto está licenciado por</strong>:
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                    Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+            </p>
+        </section>
+
+
+        <!-- Texto traduzido -->
+        <section class="texto">
+            <p>O que é a poesia? O que é o poeta? Nós renunciamos a todas as noções do passado e proclamamos audazmente!
+                “A poesia é uma bomba! O poeta é o criminoso negro<sup><span class="nota"
+                        data-nota="Por “criminoso negro” buscou-se remeter às cores comumente associadas ao anarquismo e ao título da revista, <em>Vermelho e preto</em>. O original para o que se traduziu por “negro”, 黒き (<em>kuroki</em>), aqui não possui conotação racial e é empregado em sentido adjetival e figurado como obscuro, mal, impuro, transgressor etc.">1</span></sup>
+                que joga bombas nas robustas paredes e portas das
+                prisões!”
+            </p>
+
+        </section>
+
+
+        <!-- Seção das notas -->
+        <div class="notas" id="notas">
+            <h3>Notas</h3>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const notasDiv = document.getElementById('notas');
+                const notas = document.querySelectorAll('.nota');
+
+                notas.forEach((nota, index) => {
+                    // Cria a numeração automática
+                    const notaNumber = index + 1;
+                    const notaId = `nota${notaNumber}`;
+                    const linkId = `link${notaNumber}`;
+                    const notaText = nota.getAttribute('data-nota');
+
+                    // Adiciona um link para a nota de rodapé com numeração automática
+                    nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
+
+                    // Cria o conteúdo da nota de rodapé
+                    const notaPara = document.createElement('p');
+                    notaPara.id = notaId;
+                    notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
+
+                    // Adiciona a nota de rodapé ao final
+                    notasDiv.appendChild(notaPara);
+                });
+            });
+        </script>
+
+        <footer class="rodape">
+            <span>Adicionado em: <strong id="data-adicao"></strong></span> |
+            <span>Atualizado em: <strong id="data_atualizacao"></strong></span>
+        </footer>
+
+        <script>
+            const dataAdicao = new Date(''); // Coloque aqui a data de adição
+            const dataAtualizacao = new Date(); // Data atual para atualização
+
+            document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
+            document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
+        </script>
+</body>
+
+</html>
