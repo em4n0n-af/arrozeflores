@@ -2,7 +2,7 @@
 title: "Arroz e Flores"
 description: "Antologia de literatura rebelde japonesa em tradução para o português"
 url: "https://arrozeflores.art.br"
-permalink: /:title/
+permalink: /:slug/
 baseurl: ""
 author: "Arroz e Flores"
 
