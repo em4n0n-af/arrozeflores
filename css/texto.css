@@ -142,6 +142,30 @@ main {
     margin-top: 20px; /* Espaçamento superior */
 }
 
+/* Estilo para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #000;
+}
+
+table td {
+    background-color: #ffffff;
+    color: #333;
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
     .titulo {
@@ -170,6 +194,16 @@ main {
 
     .rodape {
         font-size: 0.5rem
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    table th, table td {
+        padding: 8px;
     }
 }
 
@@ -233,5 +267,10 @@ main {
 
     .rodape {
         font-size: 0.5rem;
+    }
+    
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 6px;
     }
 }
