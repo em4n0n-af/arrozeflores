@@ -34,14 +34,12 @@
 
 <body>
     <main>
-        <!-- Destaque para o autor e título -->
         <section class="destaque">
             <h1 class="titulo">A realidade da subjugação</h1>
             <p class="autor"><strong><a href="../../antologia/ôsugi_sakae" target="_blank">Ôsugi Sakae</a></strong>
             </p>
         </section>
 
-        <!-- Créditos pela tradução e fonte -->
         <section class="creditos">
             <p><strong>Tradução</strong>: Felipe Chaves Gonçalves Pinto</p>
             <p><strong>Revisão e cotejo</strong>: Jessica Maki Kimura</p>
@@ -57,7 +55,6 @@
             </p>
         </section>
 
-        <!-- Texto traduzido -->
         <section class="texto">
             <p>Na coletânea das obras de Chogyû<sup><span class="nota"
                         data-nota="Takayama Chogyû (高山樗牛, 1871–1902) foi um escritor japonês que escreveu uma série de obras seguindo os preceitos românticos.">XY</span></sup>,
@@ -220,21 +217,17 @@
                 const notas = document.querySelectorAll('.nota');
 
                 notas.forEach((nota, index) => {
-                    // Cria a numeração automática
                     const notaNumber = index + 1;
                     const notaId = `nota${notaNumber}`;
                     const linkId = `link${notaNumber}`;
                     const notaText = nota.getAttribute('data-nota');
 
-                    // Adiciona um link para a nota de rodapé com numeração automática
                     nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
 
-                    // Cria o conteúdo da nota de rodapé
                     const notaPara = document.createElement('p');
                     notaPara.id = notaId;
                     notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
 
-                    // Adiciona a nota de rodapé ao final
                     notasDiv.appendChild(notaPara);
                 });
             });
@@ -245,9 +238,8 @@
         </footer>
 
         <script>
-            const dataAdicao = new Date('2024-09-27'); // Coloque aqui a data de adição
-            const dataAtualizacao = new Date('2024-10-09'); // Data atual para atualização
-
+            const dataAdicao = new Date('2024-09-27'); 
+            const dataAtualizacao = new Date('2024-10-09'); 
             document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
             document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
         </script>
