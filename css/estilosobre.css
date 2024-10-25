@@ -2,7 +2,9 @@
 * {
   box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -127,16 +129,19 @@ p {
   border-bottom: 2px solid #990000;
 }
 
-.alfabetica a{
+.alfabetica a {
   color: #333;
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .alfabetica a:hover {
   color: #990000;
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
 /* Seção de autores */
-.autores, .alfabetica {
+.autores,
+.alfabetica {
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -184,6 +189,7 @@ p {
   cursor: pointer;
   text-align: right;
 }
+
 .telapequena {
   display: none;
   position: fixed;
@@ -192,6 +198,126 @@ p {
   padding: 0;
   background-color: #000000;
   font-size: small;
+}
+
+.formbox-editor-1762871 {
+  margin: 0 auto;
+  padding: 30px 40px;
+  text-align: left;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.formbox-editor-1762871 fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.formbox-editor-1762871 fieldset>input,
+.formbox-editor fieldset>textarea,
+.formbox-editable-field {
+  margin: 10px 0;
+  outline: none;
+}
+
+.formbox-title-1762871 {
+  background: none;
+  border: none;
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  padding: 0;
+  width: 100%;
+  word-break: break-word;
+  margin: 10px 0;
+}
+
+.formbox-title-1762871 {
+  border-radius: 0;
+  min-height: 0;
+}
+
+input.formbox-field-1762871 {
+  border: 2px solid #f1f2f2;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+}
+
+input.field-error-1762871 {
+  border-color: #f15858;
+}
+
+input.formbox-button-1762871 {
+  background-color: #21292d;
+  border-width: 0;
+  border-style: solid;
+  border-color: #21292d;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  word-break: break-all;
+  cursor: pointer;
+}
+
+button.formbox-button-1762871 {
+  background-color: #21292d;
+  border-width: 0;
+  border-style: solid;
+  border-color: #21292d;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  word-break: break-all;
+  cursor: pointer;
+}
+
+.formbox-editor-1762871 {
+  background-color: #ffffff !important;
+}
+
+.formbox-title-1762871 {
+  font-family: Georgia, Times, "Times New Roman", serif !important;
+  font-size: 16px !important;
+  color: #000000 !important;
+  text-align: center !important;
+}
+
+.formbox-button-1762871 {
+  font-family: Georgia, Times, "Times New Roman", serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  background-color: #21292d !important;
+  border-radius: 2px !important;
+  border-color: #21292d !important;
+  border-width: 0px !important;
+  width: 100% !important;
+  border-style: solid;
+}
+
+#tdLogo1762871 img {
+  margin-botton: 10px;
+  max-width: 230px;
 }
 
 /* Estilos para tablets e dispositivos móveis */
