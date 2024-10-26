@@ -34,13 +34,11 @@
 
 <body>
     <main>
-        <!-- Destaque para o autor e título -->
         <section class="destaque">
             <h1 class="titulo">Os humildes da classe baixa e os literatos</h1>
             <p class="autor"><strong><a href="../../antologia/taoka_reiun/" target="_blank">Taoka Reiun</a></strong></p>
         </section>
 
-        <!-- Créditos pela tradução e fonte -->
         <section class="creditos">
             <p><strong>Tradução</strong>: Felipe Chaves Gonçalves Pinto
             </p>
@@ -60,7 +58,6 @@
             </p>
         </section>
 
-        <!-- Texto traduzido -->
         <section class="texto">
             <p>
                 A chamada civilização do século XIX foi uma civilização que favoreceu os ricos e, embora tenha, em nome
@@ -113,7 +110,7 @@
                         data-nota="福地桜痴 (Fukuchi Ôchi), pseudônimo de 福地源一郎 (Fukuchi Gen’ichirô, 1841-1906)."></span></sup>.
                 Ah, se fosse possível prever o outono deste mundo apenas com a queda de uma única folha, então não
                 poderíamos perceber que as pessoas gradualmente começaram a prestar atenção aos problemas da vida
-                juntamente com às questões sociais? No entanto, deve-se primeiro mover a si mesmo antes de tentar mover
+                juntamente com as questões sociais? No entanto, deve-se primeiro mover a si mesmo antes de tentar mover
                 os outros, só se as lágrimas fluírem primeiro de nossos próprios olhos que então seremos capazes de
                 fazer os outros chorarem. Aqueles que desejam protestar neste mundo em nome dos pobres e aflitos de hoje
                 devem ter em seus olhos lágrimas e em seu peito sangue em abundância. Não devemos permitir que
@@ -133,24 +130,27 @@
                 const notas = document.querySelectorAll('.nota');
 
                 notas.forEach((nota, index) => {
-                    // Cria a numeração automática
                     const notaNumber = index + 1;
                     const notaId = `nota${notaNumber}`;
                     const linkId = `link${notaNumber}`;
                     const notaText = nota.getAttribute('data-nota');
 
-                    // Adiciona um link para a nota de rodapé com numeração automática
                     nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
 
-                    // Cria o conteúdo da nota de rodapé
                     const notaPara = document.createElement('p');
                     notaPara.id = notaId;
                     notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
 
-                    // Adiciona a nota de rodapé ao final
                     notasDiv.appendChild(notaPara);
                 });
             });
+        </script>
+        <script>
+            const dataAdicao = new Date('2024-10-20'); // Coloque aqui a data de adição
+            const dataAtualizacao = new Date('2024-10-27'); // Data atual para atualização
+
+            document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
+            document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
         </script>
     </main>
 </body>
