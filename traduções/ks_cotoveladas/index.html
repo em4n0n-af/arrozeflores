@@ -34,14 +34,12 @@
 
 <body>
     <main>
-        <!-- Destaque para o autor e título -->
         <section class="destaque">
             <h1 class="titulo">Cotoveladas</h1>
             <p class="autor"><strong><a href="../../antologia/kanno_sugako" target="_blank">Kan'no Sugako</a></strong>
             </p>
         </section>
 
-        <!-- Créditos pela tradução e fonte -->
         <section class="creditos">
             <p><strong>Tradução</strong>: Felipe Chaves Gonçalves Pinto
             </p>
@@ -57,7 +55,6 @@
             </p>
         </section>
 
-        <!-- Sumário ou índice -->
         <section class="indice">
             <h3>Sumário</h3>
             <ul>
@@ -67,11 +64,9 @@
                 <li><a href="#capitulo4">Que tristeza!</a></li>
                 <li><a href="#capitulo5">Tenham coragem!</a></li>
                 <li><a href="#capitulo6">Uma saraivada de cotoveladas!</a></li>
-                <!-- Adicione mais capítulos conforme necessário -->
             </ul>
         </section>
 
-        <!-- Texto traduzido -->
         <section class="texto">
             <h3 id="capitulo1" class="capitulo">Algo necessário</h3>
             <p>Nos últimos anos as questões das mulheres, as ditas questões das senhoras<sup><span class="nota" data-nota="婦人 (<em>fujin</em>). O termo possui historicidade no movimento feminista japonesa e, comumente, refere-se às mulheres que já atingiram a maior idade. Preferiu-se, portanto, o termo “senhora” para a tradução. Assim, todas as ocorrências de “senhora” dizem respeito a este vocábulo.
@@ -94,7 +89,7 @@
                 Antes de explicar isso, gostaria de perguntar às senhoras se estão ou não absolutamente seguras e satisfeitas com suas situações.
             </p>
             <p>
-                Observando daqui,do meu ponto de vista, descobri o fato de que, apesar do costume de longa data em demonstrarem-se pacíficas e tranquilas na superfície, todas as mulheres, com exceção de pouquíssimas, têm algum tipo de angústia no peito e estão cheias de receio. Por que isso acontece!?
+                Observando daqui, do meu ponto de vista, descobri o fato de que, apesar do costume de longa data em demonstrarem-se pacíficas e tranquilas na superfície, todas as mulheres, com exceção de pouquíssimas, têm algum tipo de angústia no peito e estão cheias de receio. Por que isso acontece!?
             </p>
 
             <h3 id="capitulo3" class="capitulo">A castidade dos homens</h3>
@@ -124,7 +119,6 @@
             <p>Somente assim você poderá criar a família ideal.</p>
             <p>Senhoras, tenham coragem!, lustrem suas cotoveladas!</p>
 
-            <!-- Adicione mais conteúdo conforme necessário -->
         </section>
 
         <div class="notas" id="notas">
@@ -137,21 +131,17 @@
                 const notas = document.querySelectorAll('.nota');
 
                 notas.forEach((nota, index) => {
-                    // Cria a numeração automática
                     const notaNumber = index + 1;
                     const notaId = `nota${notaNumber}`;
                     const linkId = `link${notaNumber}`;
                     const notaText = nota.getAttribute('data-nota');
 
-                    // Adiciona um link para a nota de rodapé com numeração automática
                     nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
 
-                    // Cria o conteúdo da nota de rodapé
                     const notaPara = document.createElement('p');
                     notaPara.id = notaId;
                     notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
 
-                    // Adiciona a nota de rodapé ao final
                     notasDiv.appendChild(notaPara);
                 });
             });
@@ -163,8 +153,8 @@
         </footer>
 
         <script>
-            const dataAdicao = new Date('2024-09-27'); // Coloque aqui a data de adição
-            const dataAtualizacao = new Date('2024-09-27'); // Data atual para atualização
+            const dataAdicao = new Date('2024-09-27'); 
+            const dataAtualizacao = new Date('2024-11-08');
 
             document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
             document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');

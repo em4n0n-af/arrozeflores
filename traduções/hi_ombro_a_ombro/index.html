@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Tradução de “Takekurabe (たけくらべ)”, de Higuchi Ichiyô. Arroz e flores: antologia de literatura rebelde japonesa em português">
+    <link rel="icon" href="../../images/icone.svg" type="image/svg+xml">
+    <title>Ombro a ombro - Higuchi Ichiyô</title>
+    <style>
+        sup {
+            font-size: 0.8rem;
+            vertical-align: super;
+        }
+
+        a {
+            color: #900;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .notas p {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/texto.css">
+</head>
+
+<body>
+    <main>
+        <section class="destaque">
+            <h1 class="titulo">Ombro a ombro</h1>
+            <p class="autor"><strong><a href="../../antologia/higuchi_ichiô/" target="_blank">Higuchi Ichiyô</a></strong></p>
+        </section>
+
+        <section class="creditos">
+            <p><strong>Tradução</strong>: Gustavo Perez Katague
+            </p>
+            <p><strong>HTML</strong>: Felipe Chaves Gonçalves Pinto</p>
+            <p><strong>Primeira publicação da tradução</strong>: Katague, Gustavo Perez. <em>Ombro a ombro: uma tradução comentada para a obra Takekurabe (1896) da autora Higuchi Ichiyô (1872-1896)</em>. Dissertação de mestrado, USP, p. 65-158,
+                2024. Disponível em: <a href="https://doi.org/10.11606/D.8.2024.tde-05112024-130717" target="_blank">Banco de dados USP
+                        </a>.
+                Acesso em: 07/11/2024</p>
+            <p><strong>Texto original</strong>: "Takekurabe". In: <em>Bungei kurabu</em>, Tóquio, 1896.
+                Disponível em: <a href="https://www.aozora.gr.jp/cards/000064/files/389_15297.html" target="_blank"><em>Aozorabunko</em></a>.
+                Acesso em: 07/11/2024.</p>
+            <p><strong>Este texto está licenciado por</strong>:
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                    Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+            </p>
+        </section>
+
+        <section class="indice">
+            <h3>Sumário</h3>
+            <ul>
+                <li><a href="#capitulo1">Capítulo 1</a></li>
+                <li><a href="#capitulo2">Capítulo 2</a></li>
+                <li><a href="#capitulo3">Capítulo 3</a></li>
+                <li><a href="#capitulo4">Capítulo 4</a></li>
+                <li><a href="#capitulo5">Capítulo 5</a></li>
+                <li><a href="#capitulo6">Capítulo 6</a></li>
+                <li><a href="#capitulo7">Capítulo 7</a></li>
+                <li><a href="#capitulo8">Capítulo 8</a></li>
+                <li><a href="#capitulo9">Capítulo 9</a></li>
+                <li><a href="#capitulo10">Capítulo 10</a></li>
+                <li><a href="#capitulo11">Capítulo 11</a></li>
+                <li><a href="#capitulo12">Capítulo 12</a></li>
+                <li><a href="#capitulo13">Capítulo 13</a></li>
+                <li><a href="#capitulo14">Capítulo 14</a></li>
+                <li><a href="#capitulo15">Capítulo 15</a></li>
+                <li><a href="#capitulo16">Capítulo 16</a></li>
+            </ul>
+        </section>
+
+        <section class="texto">
+            <h3 id="capitulo1" class="capitulo">Capítulo 1</h3>
+            
+            <p>Texto do subcapítulo 1.1 aqui.</p>
+
+            <h3 id="capitulo2" class="capitulo">Capítulo 2</h3>
+            <p>Texto do segundo capítulo começa aqui.</p>
+            
+            <h3 id="capitulo3" class="capitulo">Capítulo 3</h3>
+            <h3 id="capitulo4" class="capitulo">Capítulo 4</h3>
+            <h3 id="capitulo5" class="capitulo">Capítulo 5</h3>
+            <h3 id="capitulo6" class="capitulo">Capítulo 6</h3>
+            <h3 id="capitulo7" class="capitulo">Capítulo 7</h3>
+            <h3 id="capitulo8" class="capitulo">Capítulo 8</h3>
+            <h3 id="capitulo9" class="capitulo">Capítulo 9</h3>
+            <h3 id="capitulo10" class="capitulo">Capítulo 10</h3>
+            <h3 id="capitulo11" class="capitulo">Capítulo 11</h3>
+            <h3 id="capitulo12" class="capitulo">Capítulo 12</h3>
+            <h3 id="capitulo13" class="capitulo">Capítulo 13</h3>
+            <h3 id="capitulo14" class="capitulo">Capítulo 14</h3>
+            <h3 id="capitulo15" class="capitulo">Capítulo 15</h3>
+            <h3 id="capitulo16" class="capitulo">Capítulo 16</h3>
+
+        </section>
+
+        <div class="notas" id="notas">
+            <h3>Notas</h3>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const notasDiv = document.getElementById('notas');
+                const notas = document.querySelectorAll('.nota');
+
+                notas.forEach((nota, index) => {
+                    const notaNumber = index + 1;
+                    const notaId = `nota${notaNumber}`;
+                    const linkId = `link${notaNumber}`;
+                    const notaText = nota.getAttribute('data-nota');
+
+                    nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
+
+                    const notaPara = document.createElement('p');
+                    notaPara.id = notaId;
+                    notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
+
+                    notasDiv.appendChild(notaPara);
+                });
+            });
+        </script>
+        
+         <footer class="rodape">
+             <span>Adicionado em: <strong id="data-adicao"></strong></span> |
+             <span>Atualizado em: <strong id="data_atualizacao"></strong></span>
+         </footer>
+ 
+         <script>
+             const dataAdicao = new Date('2024-11-08'); 
+             const dataAtualizacao = new Date('2024-11-08'); 
+ 
+             document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
+             document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
+         </script>
+    </main>
+</body>
+
+</html>
