@@ -34,7 +34,6 @@
 
 <body>
     <main>
-        <!-- Destaque para o autor e título -->
         <section class="destaque">
             <h1 class="titulo">Valores políticos e valores artísticos:</h1>
             <h1 class="subtitulo">reavaliando a teoria marxista</h1>
@@ -42,7 +41,6 @@
                         Hatsunosuke</a></strong></p>
         </section>
 
-        <!-- Créditos pela tradução e fonte -->
         <section class="creditos">
             <p><strong>Tradução</strong>: Fabio Pomponio Saldanha</p>
             <p><strong>Revisão e cotejo</strong>: Felipe Chaves Gonçalves Pinto</p>
@@ -58,17 +56,13 @@
                     Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
             </p>
         </section>
-        <!-- Sumário ou índice -->
         <section class="indice">
             <h3>Sumário</h3>
             <ul>
                 <li><a href="#capitulo1">1</a></li>
                 <li><a href="#capitulo2">2</a></li>
-
-                <!-- Adicione mais capítulos conforme necessário -->
             </ul>
         </section>
-        <!-- Texto traduzido -->
         <section class="texto">
             <h3 id="capitulo1" class="capitulo">1</h3>
             <p>Ainda que Copérnico tenha advogado em nome do heliocentrismo, para que o mesmo se tornasse uma teoria
@@ -331,7 +325,6 @@
             <p style="text-align: right;"> Março do quarto ano da Era Shōwa (1929), revista <em>Shinchô</em>.</p>
         </section>
 
-        <!-- Seção das notas -->
         <div class="notas" id="notas">
             <h3>Notas</h3>
         </div>
@@ -342,21 +335,17 @@
                 const notas = document.querySelectorAll('.nota');
 
                 notas.forEach((nota, index) => {
-                    // Cria a numeração automática
                     const notaNumber = index + 1;
                     const notaId = `nota${notaNumber}`;
                     const linkId = `link${notaNumber}`;
                     const notaText = nota.getAttribute('data-nota');
 
-                    // Adiciona um link para a nota de rodapé com numeração automática
                     nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
 
-                    // Cria o conteúdo da nota de rodapé
                     const notaPara = document.createElement('p');
                     notaPara.id = notaId;
                     notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
 
-                    // Adiciona a nota de rodapé ao final
                     notasDiv.appendChild(notaPara);
                 });
             });
@@ -368,8 +357,8 @@
         </footer>
 
         <script>
-            const dataAdicao = new Date('2024-10-1'); // Coloque aqui a data de adição
-            const dataAtualizacao = new Date('2024-10-1'); // Data atual para atualização
+            const dataAdicao = new Date('2024-10-1'); 
+            const dataAtualizacao = new Date('2024-10-1'); 
 
             document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
             document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');

@@ -34,14 +34,12 @@
 
 <body>
     <main>
-        <!-- Destaque para o autor e título -->
         <section class="destaque">
             <h1 class="titulo">Movimento literário e movimento dos trabalhadores</h1>
             <p class="autor"><strong><a href="../../antologia/hirabaiyashi_hatsunosuke" target="_blank">Hirabayashi
                         Hatsunosuke</a></strong></p>
         </section>
 
-        <!-- Créditos pela tradução e fonte -->
         <section class="creditos">
             <p><strong>Tradução</strong>: Fabio Pomponio Saldanha, Felipe Chaves Gonçalves Pinto, Gustavo Perez Katague
             </p>
@@ -63,7 +61,6 @@
             </p>
         </section>
 
-        <!-- Texto traduzido -->
         <section class="texto">
             <h3 id="capitulo1" class="capitulo">1</h3>
             <p>O movimento literário desde a era Meiji era uma disputa entre uma
@@ -202,7 +199,6 @@
 
         </section>
 
-        <!-- Seção das notas -->
         <div class="notas" id="notas">
             <h3>Notas</h3>
         </div>
@@ -213,21 +209,17 @@
                 const notas = document.querySelectorAll('.nota');
 
                 notas.forEach((nota, index) => {
-                    // Cria a numeração automática
                     const notaNumber = index + 1;
                     const notaId = `nota${notaNumber}`;
                     const linkId = `link${notaNumber}`;
                     const notaText = nota.getAttribute('data-nota');
 
-                    // Adiciona um link para a nota de rodapé com numeração automática
                     nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
 
-                    // Cria o conteúdo da nota de rodapé
                     const notaPara = document.createElement('p');
                     notaPara.id = notaId;
                     notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
 
-                    // Adiciona a nota de rodapé ao final
                     notasDiv.appendChild(notaPara);
                 });
             });
@@ -239,8 +231,8 @@
         </footer>
 
         <script>
-            const dataAdicao = new Date('2024-09-19'); // Coloque aqui a data de adição
-            const dataAtualizacao = new Date('2024-09-19'); // Data atual para atualização
+            const dataAdicao = new Date('2024-09-19'); 
+            const dataAtualizacao = new Date('2024-09-19'); 
 
             document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
             document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
