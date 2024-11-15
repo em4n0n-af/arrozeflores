@@ -1,4 +1,3 @@
-/* Estilos globais */
 * {
     box-sizing: border-box;
 }
@@ -11,7 +10,6 @@ html, body {
     color: #333;
 }
 
-/* Fundo com imagem */
 body {
    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f8/Three_children_drawing%2C_%28on_panels%29%2C_Japan%2C_1909_LCCN2001705661.jpg');
    background-size: cover;
@@ -20,7 +18,6 @@ body {
    overflow-x: hidden;
 }
 
-/* Cabeçalho */
 header {
     display: flex;
     justify-content: space-between;
@@ -33,7 +30,6 @@ header {
     top: 0;
 }
 
-/* Logo */
 .logo {
     margin: 0;
     padding: 25px;
@@ -42,6 +38,7 @@ header {
     text-transform: lowercase;
     user-select: none;
     color: #fff;
+    line-height: 0.9;
 }
 .logo h1 {
     margin: 0;
@@ -52,7 +49,6 @@ header {
     color: #fff;
 }
 
-/* Lista de navegação */
 .lista {
     margin: 10px 0;
     font-weight: bold;
@@ -77,9 +73,8 @@ header {
     text-decoration: underline;
 }
 
-/* Botão hamburger (para dispositivos móveis) */
 .menu-btn {
-    display: none; /* Escondido por padrão (desktop) */
+    display: none; 
     background: none;
     border: none;
     color: #fff;
@@ -88,7 +83,6 @@ header {
     cursor: pointer;
 }
 
-/* Corpo principal */
 main {
     width: 80%;
     margin: 0 auto;
@@ -98,7 +92,6 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Rodapé */
 footer {
     background-color: rgba(51, 51, 51, 0.208);
     color: white;
@@ -120,17 +113,14 @@ footer h2 {
     font-weight: 500;
 }
 
-/* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
-    /* Ajuste da logo */
     .logo {
         font-size: 2rem;
         padding: 15px;
     }
 
-    /* Ajuste da lista de navegação */
     .lista ul {
-        display: none; /* Escondido por padrão */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 110px;
@@ -142,18 +132,15 @@ footer h2 {
         font-size: x-large;
     }
 
-    /* Exibe o botão hamburger */
     .menu-btn {
         display: block;
         z-index: 1000;
     }
 
-    /* Quando o menu estiver aberto */
     .menu-aberto ul {
-        display: flex !important; /* Exibe o menu ao clicar */
+        display: flex !important; 
     }
 
-    /* Ajuste do corpo principal */
     main {
         width: 90%;
         padding: 50px 20px 20px;
@@ -196,4 +183,4 @@ footer h2 {
     footer {
         justify-content: center;
         text-align: center;
-}
+}}
