@@ -34,14 +34,12 @@
 
 <body>
     <main>
-        <!-- Destaque para o autor e título -->
         <section class="destaque">
             <h1 class="titulo">A vocação da mulher</h1>
             <p class="autor"><strong><a href="../../antologia/sakai_toshihiko/" target="_blank">Sakai
                         Toshihiko</a></strong></p>
         </section>
 
-        <!-- Créditos pela tradução e fonte -->
         <section class="creditos">
             <p><strong>Tradução</strong>: Rafael Silva Rufino de Sousa
             </p>
@@ -57,7 +55,6 @@
             </p>
         </section>
 
-        <!-- Sumário ou índice -->
         <section class="indice">
             <h3>Sumário</h3>
             <ul>
@@ -65,11 +62,9 @@
                 <li><a href="#capitulo2">2</a></li>
                 <li><a href="#capitulo3">3</a></li>
                 <li><a href="#capitulo4">4</a></li>
-                <!-- Adicione mais capítulos conforme necessário -->
             </ul>
         </section>
 
-        <!-- Texto traduzido -->
         <section class="texto">
             <h3 id="capitulo1" class="capitulo">1</h3>
             <p>Senhorita Eiko Fukuda. Sempre ouvimos de muitos estudiosos, homens letrados, pregadores e oradores, que
@@ -227,21 +222,17 @@
                 const notas = document.querySelectorAll('.nota');
 
                 notas.forEach((nota, index) => {
-                    // Cria a numeração automática
                     const notaNumber = index + 1;
                     const notaId = `nota${notaNumber}`;
                     const linkId = `link${notaNumber}`;
                     const notaText = nota.getAttribute('data-nota');
 
-                    // Adiciona um link para a nota de rodapé com numeração automática
                     nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
 
-                    // Cria o conteúdo da nota de rodapé
                     const notaPara = document.createElement('p');
                     notaPara.id = notaId;
                     notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
 
-                    // Adiciona a nota de rodapé ao final
                     notasDiv.appendChild(notaPara);
                 });
             });
@@ -252,8 +243,8 @@
         </footer>
 
         <script>
-            const dataAdicao = new Date('2024-10-11'); // Coloque aqui a data de adição
-            const dataAtualizacao = new Date('2024-10-11'); // Data atual para atualização
+            const dataAdicao = new Date('2024-10-11'); 
+            const dataAtualizacao = new Date('2024-10-11'); 
 
             document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
             document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
