@@ -7,7 +7,7 @@
     <meta name="description"
     content="Tradução de “Sengen (宣言)”, de Aka to kuro (赤と黒). Arroz e flores: antologia de literatura rebelde japonesa em português">
     <link rel="icon" href="../../images/icone.svg" type="image/svg+xml">
-    <title>Manifesto - Vermelho e preto</title>
+    <title>Manifesto - Aka to kuro</title>
     <style>
         sup {
             font-size: 0.8rem;
@@ -34,26 +34,20 @@
 
 <body>
     <main>
-        <!-- Destaque para o autor e título -->
         <section class="destaque">
             <h1 class="titulo">Manifesto</h1>
-            <p class="autor"><strong><a href="../../antologia/vermelho_e_preto" target="_blank">Vermelho e
-                        preto</a></strong></p>
+            <p class="autor"><strong><a href="../../antologia/aka_to_kuro/" target="_blank">Aka to kuro</a></strong></p>
         </section>
 
-        <!-- Créditos pela tradução e fonte -->
         <section class="creditos">
             <p><strong>Tradução</strong>: Felipe Chaves Gonçalves Pinto</p>
             <p><strong>HTML</strong>: Felipe Chaves Gonçalves Pinto</p>
-            <p><strong>Primeira publicação da tradução</strong>: <em>Revista Magma</em>, vol. 28, no. 18, p. 217-222,
-                2023. Disponível em: <a href="https://www.revistas.usp.br/magma/article/view/210622"
-                    target="_blank"><em>Revista
-                        Magma</em></a>.
-                Acesso em: 19/09/2024</p>
-            <p><strong>Texto original</strong>: "Sengen hitotsu". In: <em>Kaizô</em>, Tóquio, 1922.
-                Disponível em: <a href="https://www.aozora.gr.jp/cards/000025/files/217_20459"
-                    target="_blank"><em>Aozorabunko</em></a>.
-                Acesso em: 19/09/2024.</p>
+            <p><strong>Primeira publicação da tradução</strong>: Pinto, F. C. G. "Aka to kuro (1923-4), as cores da revolta em uma revista poética improvável". <em>Cadernos de Literatura em Tradução</em>, n. 29, p. 142–167, 2025.
+                Disponível em: <a href="https://revistas.usp.br/clt/article/view/239236"
+                    target="_blank"><em>Cadernos de Literatura em Tradução</em></a>.
+                Acesso em: 16/07/2025</p>
+            <p><strong>Texto original</strong>: "Sengen". In: <em>Aka to kuro</em>, vol, 1, Tóquio, 1923.
+                Texto disponível logo abaixo da tradução.</p>
             <p><strong>Este texto está licenciado por</strong>:
                 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
                     Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
@@ -61,19 +55,18 @@
         </section>
 
 
-        <!-- Texto traduzido -->
         <section class="texto">
-            <p>O que é a poesia? O que é o poeta? Nós renunciamos a todas as noções do passado e proclamamos audazmente!
+            <p style="text-indent: 0; padding-left: 6em;">O que é a poesia? O que é o poeta? Nós renunciamos a todas as noções do passado e proclamamos audazmente!
                 “A poesia é uma bomba! O poeta é o criminoso negro<sup><span class="nota"
                         data-nota="Por “criminoso negro” buscou-se remeter às cores comumente associadas ao anarquismo e ao título da revista, <em>Vermelho e preto</em>. O original para o que se traduziu por “negro”, 黒き (<em>kuroki</em>), aqui não possui conotação racial e é empregado em sentido adjetival e figurado como obscuro, mal, impuro, transgressor etc.">1</span></sup>
                 que joga bombas nas robustas paredes e portas das
                 prisões!”
             </p>
+            <p style="text-indent: 0; padding-left: 6em;">詩とは？詩人とは？我々は過去の一切の概 念を放棄して、大胆に断言する！『詩とは 爆弾である！詩人とは牢獄の固き壁と扉と に爆弾を投ずる黒き犯人である！』</p>
 
         </section>
 
 
-        <!-- Seção das notas -->
         <div class="notas" id="notas">
             <h3>Notas</h3>
         </div>
@@ -84,21 +77,17 @@
                 const notas = document.querySelectorAll('.nota');
 
                 notas.forEach((nota, index) => {
-                    // Cria a numeração automática
                     const notaNumber = index + 1;
                     const notaId = `nota${notaNumber}`;
                     const linkId = `link${notaNumber}`;
                     const notaText = nota.getAttribute('data-nota');
 
-                    // Adiciona um link para a nota de rodapé com numeração automática
                     nota.innerHTML = `<a href="#${notaId}" id="${linkId}">${notaNumber}</a>`;
 
-                    // Cria o conteúdo da nota de rodapé
                     const notaPara = document.createElement('p');
                     notaPara.id = notaId;
                     notaPara.innerHTML = `<strong>Nota ${notaNumber}:</strong> ${notaText} <a href="#${linkId}">Voltar para o texto</a>`;
 
-                    // Adiciona a nota de rodapé ao final
                     notasDiv.appendChild(notaPara);
                 });
             });
@@ -110,8 +99,8 @@
         </footer>
 
         <script>
-            const dataAdicao = new Date(''); // Coloque aqui a data de adição
-            const dataAtualizacao = new Date(); // Data atual para atualização
+            const dataAdicao = new Date('2025-07-18'); 
+            const dataAtualizacao = new Date('2025-07-18'); 
 
             document.getElementById('data-adicao').textContent = dataAdicao.toLocaleDateString('pt-BR');
             document.getElementById('data_atualizacao').textContent = dataAtualizacao.toLocaleDateString('pt-BR');
