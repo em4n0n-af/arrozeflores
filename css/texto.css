@@ -11,6 +11,16 @@ html, body {
     line-height: 1.8;
 }
 
+:root {
+    --escala-leitura: 1;
+    --tamanho-titulo: 2.2rem;
+    --tamanho-subtitulo: 1.5rem;
+    --tamanho-autor: 1.2rem;
+    --tamanho-capitulo: 1.6rem;
+    --tamanho-subcapitulo: 1.25rem;
+    --tamanho-texto: clamp(1.125rem, 1.05rem + 0.25vw, 1.2rem);
+}
+
 main {
     max-width: 1200px;
     margin: 40px auto;
@@ -20,25 +30,25 @@ main {
 
 .destaque {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .titulo {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #000000;
 }
 
 .subtitulo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #666;
     margin-bottom: 15px;
 }
 
 .autor {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-style: italic;
     color: #666;
 }
@@ -61,7 +71,8 @@ main {
     font-style: normal;
     border-top: 1px solid #510101;
     border-bottom: 1px solid #510101;
-    line-height: 1;
+    line-height: 1.5;
+    margin-bottom: 28px;
 }
 
 .creditos p {
@@ -79,7 +90,7 @@ main {
 }
 
 .indice {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
 }
 
 .indice h3 {
@@ -108,10 +119,88 @@ main {
 }
 
 .texto {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: justify;
-    text-indent: 1.27cm;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    font-size: clamp(1rem, 0.96rem + 0.25vw, 1.2rem);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.texto p {
+    margin: 0 0 1em;
+    text-indent: 1em;
+}
+
+.controles-leitura {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    max-width: 68ch;
+    margin: 0 auto 40px;
+    padding: 8px;
+    border: 1px solid #d5d5d5;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+.controles-leitura button {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    border: 1px solid #765252;
+    border-radius: 4px;
+    background-color: #f5f0ed;
+    color: #563a3a;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+.controles-leitura button:hover {
+    background-color: #e9ded9;
+}
+
+.controles-leitura button:focus-visible {
+    outline: 3px solid #990000;
+    outline-offset: 2px;
+}
+
+.tamanho-leitura {
+    min-width: 4.5em;
+    text-align: center;
+}
+
+.voltar-topo {
+    position: fixed;
+    z-index: 10;
+    right: 20px;
+    bottom: 20px;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid #765252;
+    border-radius: 50%;
+    background-color: #765252;
+    color: #ffffff;
+    font: bold 1.5rem/1 Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+}
+
+.voltar-topo[hidden] {
+    display: none;
+}
+
+.voltar-topo:focus-visible {
+    outline: 3px solid #f2c14e;
+    outline-offset: 3px;
 }
 
 .capitulo {
@@ -171,10 +260,6 @@ table td {
         font-size: 1.5rem;
     }
 
-    .texto {
-        font-size: 1.1rem;
-    }
-
     .capitulo {
         font-size: 1.8rem;
     }
@@ -215,10 +300,6 @@ table td {
         font-size: 1.4rem;
     }
 
-    .texto {
-        font-size: 1rem;
-    }
-
     .capitulo {
         font-size: 1.6rem;
     }
@@ -244,10 +325,6 @@ table td {
         font-size: 1.2rem;
     }
 
-    .texto {
-        font-size: 0.9rem;
-    }
-
     .capitulo {
         font-size: 1.4rem;
     }
@@ -263,5 +340,120 @@ table td {
     table th, table td {
         font-size: 0.9rem;
         padding: 6px;
+    }
+}
+
+.destaque .titulo {
+    font-size: calc(var(--tamanho-titulo) * var(--escala-leitura)) !important;
+}
+
+.destaque .subtitulo {
+    font-size: calc(var(--tamanho-subtitulo) * var(--escala-leitura)) !important;
+}
+
+.destaque .autor {
+    font-size: calc(var(--tamanho-autor) * var(--escala-leitura)) !important;
+}
+
+.creditos,
+.creditos p {
+    font-size: calc(1rem * var(--escala-leitura)) !important;
+}
+
+.indice h3,
+.notas h3 {
+    font-size: calc(1.35rem * var(--escala-leitura)) !important;
+}
+
+.texto {
+    font-size: calc(var(--tamanho-texto) * var(--escala-leitura)) !important;
+}
+
+.texto .capitulo {
+    font-size: calc(var(--tamanho-capitulo) * var(--escala-leitura)) !important;
+}
+
+.texto .subcapitulo {
+    font-size: calc(var(--tamanho-subcapitulo) * var(--escala-leitura)) !important;
+}
+
+.texto sup {
+    font-size: 0.75em !important;
+}
+
+.notas p {
+    font-size: calc(0.9rem * var(--escala-leitura)) !important;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --tamanho-titulo: 1.9rem;
+        --tamanho-subtitulo: 1.4rem;
+        --tamanho-autor: 1.15rem;
+        --tamanho-capitulo: 1.5rem;
+        --tamanho-subcapitulo: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --tamanho-titulo: 1.7rem;
+        --tamanho-subtitulo: 1.3rem;
+        --tamanho-autor: 1.1rem;
+        --tamanho-capitulo: 1.4rem;
+        --tamanho-subcapitulo: 1.15rem;
+    }
+
+    .creditos {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --tamanho-titulo: 1.5rem;
+        --tamanho-subtitulo: 1.2rem;
+        --tamanho-autor: 1.05rem;
+        --tamanho-capitulo: 1.3rem;
+        --tamanho-subcapitulo: 1.1rem;
+    }
+
+    .voltar-topo {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+@media print {
+    @page {
+        margin: 20mm 15mm;
+
+        @bottom-center {
+            color: #555555;
+            content: "Página " counter(page) " de " counter(pages);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 9pt;
+        }
+    }
+
+    html,
+    body,
+    main {
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .controles-leitura,
+    .voltar-topo {
+        display: none;
+    }
+
+    .texto {
+        max-width: none;
+        font-size: 12pt !important;
+        line-height: 1.5;
+        text-align: justify !important;
     }
 }

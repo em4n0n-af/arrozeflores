@@ -64,6 +64,12 @@
     color: #990000;
     text-decoration: underline;
   }
+
+  .menu-btn:focus-visible,
+  .lista a:focus-visible {
+    outline: 3px solid #f2c14e;
+    outline-offset: 3px;
+  }
   
   /* Rodapé incorporado no cabeçalho */
   footer {
@@ -165,14 +171,32 @@
   }
   
   .obras a {
-    color: #333;
-    text-decoration: none;
+    display: inline-flex;
+    margin: 2px 3px 2px 0;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 7px;
+    border: 1px solid #765252;
+    border-radius: 4px;
+    background-color: #765252;
+    color: #ffffff;
+    font-size: 0.9rem;
     font-weight: bold;
+    text-decoration: none;
+    line-height: 1.35;
+    text-align: center;
   }
   
   .obras a:hover {
-    color: #990000;
+    background-color: #5c3f3f;
+    border-color: #5c3f3f;
     text-decoration: underline;
+  }
+
+  .obras a:focus-visible {
+    outline: 3px solid #765252;
+    outline-offset: 3px;
   }
   
   /* Botão hamburger (aparece apenas em dispositivos móveis) */

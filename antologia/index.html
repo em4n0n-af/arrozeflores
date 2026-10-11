@@ -37,6 +37,12 @@
 
     <main>
         <h1>antologia</h1>
+
+        <section class="busca-antologia" aria-label="Buscar autores">
+            <label for="busca-autores">Buscar autor</label>
+            <input id="busca-autores" type="search" autocomplete="off" aria-describedby="resultado-busca">
+            <p id="resultado-busca" aria-live="polite"></p>
+        </section>
         
         <section class="alfabetica">
             <h2>A</h2>
@@ -202,5 +208,6 @@
     </footer>
     
     <script src="../js/menu.js"></script>
+    <script src="../js/busca-antologia.js"></script>
 </body>
 </html>

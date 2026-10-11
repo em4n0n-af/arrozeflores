@@ -73,6 +73,12 @@ header {
     text-decoration: underline;
 }
 
+.menu-btn:focus-visible,
+.lista a:focus-visible {
+    outline: 3px solid #f2c14e;
+    outline-offset: 3px;
+}
+
 .menu-btn {
     display: none; 
     background: none;

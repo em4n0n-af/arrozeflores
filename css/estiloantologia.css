@@ -65,6 +65,12 @@ header {
     text-decoration: underline;
 }
 
+.menu-btn:focus-visible,
+.lista a:focus-visible {
+    outline: 3px solid #f2c14e;
+    outline-offset: 3px;
+}
+
 /* Rodapé incorporado no cabeçalho */
 footer {
     color: white;
@@ -134,6 +140,11 @@ h1 {
     padding: 5px;
 }
 
+.autor[hidden],
+.alfabetica h2[hidden] {
+    display: none;
+}
+
 .autor img {
     width: 60px;
     height: 60px;
@@ -155,6 +166,41 @@ h1 {
 .autor a:hover {
     color: #990000;
     text-decoration: underline;
+}
+
+.busca-antologia {
+    max-width: 36rem;
+    margin: 0 10px 24px;
+}
+
+.busca-antologia label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.busca-antologia input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.busca-antologia input:focus-visible {
+    outline: 3px solid #990000;
+    outline-offset: 2px;
+}
+
+.busca-antologia p {
+    min-height: 1.5em;
+    margin: 6px 0 0;
+    font-size: 0.95rem;
+}
+
+.busca-antologia p:empty {
+    display: none;
 }
 
 /* Botão hamburger (para dispositivos móveis) */

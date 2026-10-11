@@ -1,8 +1,25 @@
-// Captura o botão de menu e o próprio menu
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
 
-// Adiciona o evento de clique para abrir/fechar o menu
-menuBtn.addEventListener('click', function() {
-    menu.classList.toggle('menu-aberto'); // Alterna entre abrir e fechar o menu
-});
+if (menuBtn && menu) {
+    function definirMenuAberto(aberto) {
+        menu.classList.toggle('menu-aberto', aberto);
+        menuBtn.setAttribute('aria-expanded', String(aberto));
+        menuBtn.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    }
+
+    menuBtn.setAttribute('aria-controls', menu.id);
+    definirMenuAberto(false);
+
+    menuBtn.addEventListener('click', function () {
+        const aberto = menuBtn.getAttribute('aria-expanded') !== 'true';
+        definirMenuAberto(aberto);
+    });
+
+    menu.addEventListener('keydown', function (evento) {
+        if (evento.key === 'Escape') {
+            definirMenuAberto(false);
+            menuBtn.focus();
+        }
+    });
+}
